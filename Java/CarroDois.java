@@ -1,10 +1,10 @@
-class Carro {
+class CarroDois {
     private String marca;
     private String modelo;
     private int ano;
     private int velocidade;
 
-    public Carro(String marca, String modelo, int ano) {
+    public CarroDois(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
@@ -32,7 +32,7 @@ class Carro {
 
 public class Main {
     public static void main(String[] args) {
-        Carro carroTeste = new Carro("Toyota", "Corolla", 2020);
+        CarroDois carroTeste = new CarroDois("Toyota", "Corolla", 2020);
 
         System.out.println(carroTeste.acelerar(50));
         System.out.println(carroTeste.frear(20));

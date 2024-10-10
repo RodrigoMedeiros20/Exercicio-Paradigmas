@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class Animal {
+abstract class AnimalDois {
     protected String nome;
 
-    public Animal(String nome) {
+    public AnimalDois(String nome) {
         this.nome = nome;
     }
 
     public abstract String som();
 }
 
-class Cachorro extends Animal {
+class Cachorro extends AnimalDois {
     public Cachorro(String nome) {
         super(nome);
     }
@@ -22,7 +22,7 @@ class Cachorro extends Animal {
     }
 }
 
-class Gato extends Animal {
+class Gato extends AnimalDois {
     public Gato(String nome) {
         super(nome);
     }
@@ -34,14 +34,14 @@ class Gato extends Animal {
 }
 
 public class Main {
-    public static void emitirSons(List<Animal> animais) {
-        for (Animal animal : animais) {
+    public static void emitirSons(List<AnimalDois> animais) {
+        for (AnimalDois animal : animais) {
             System.out.println(animal.som());
         }
     }
 
     public static void main(String[] args) {
-        List<Animal> animais = new ArrayList<>();
+        List<AnimalDois> animais = new ArrayList<>();
         animais.add(new Cachorro("Valente"));
         animais.add(new Gato("Marley"));
         animais.add(new Cachorro("Sansão"));

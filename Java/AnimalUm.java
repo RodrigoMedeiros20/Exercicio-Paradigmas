@@ -1,14 +1,14 @@
-abstract class Animal {
+abstract class AnimalUm {
     protected String nome;
 
-    public Animal(String nome) {
+    public AnimalUm(String nome) {
         this.nome = nome;
     }
 
     public abstract String som();
 }
 
-class Cachorro extends Animal {
+class Cachorro extends AnimalUm {
     public Cachorro(String nome) {
         super(nome);
     }
@@ -19,7 +19,7 @@ class Cachorro extends Animal {
     }
 }
 
-class Gato extends Animal {
+class Gato extends AnimalUm {
     public Gato(String nome) {
         super(nome);
     }
@@ -32,8 +32,8 @@ class Gato extends Animal {
 
 public class Main {
     public static void main(String[] args) {
-        Animal cachorro = new Cachorro("Thor");
-        Animal gato = new Gato("Mel");
+        AnimalUm cachorro = new Cachorro("Thor");
+        AnimalUm gato = new Gato("Mel");
 
         System.out.println(cachorro.som());
         System.out.println(gato.som());

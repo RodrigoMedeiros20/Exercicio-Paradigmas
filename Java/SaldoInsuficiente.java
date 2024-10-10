@@ -1,5 +1,5 @@
-class SaldoInsuficienteException extends Exception {
-    public SaldoInsuficienteException(String mensagem) {
+class SaldoInsuficiente extends Exception {
+    public SaldoInsuficiente(String mensagem) {
         super(mensagem);
     }
 }
@@ -20,9 +20,9 @@ class ContaBancaria {
         saldo += valor;
     }
 
-    public void sacar(double valor) throws SaldoInsuficienteException {
+    public void sacar(double valor) throws SaldoInsuficiente {
         if (valor > saldo) {
-            throw new SaldoInsuficienteException("Saldo insuficiente para realizar o saque.");
+            throw new SaldoInsuficiente("Saldo insuficiente para realizar o saque.");
         }
         saldo -= valor;
     }
@@ -38,7 +38,7 @@ public class Main {
 
         try {
             conta.sacar(150);
-        } catch (SaldoInsuficienteException e) {
+        } catch (SaldoInsuficiente e) {
             System.out.println(e.getMessage());
         }
     }
